@@ -6,7 +6,7 @@ date:       2019-11-25 18:20:00
 author:     "Felix"
 header-img: "img/post-bg-github-cup.jpg"
 tags:
-    - 生活
+    - life
 ---
 
 > “Yeah It's on. ”
