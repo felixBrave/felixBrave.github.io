@@ -11,12 +11,12 @@ tags:
 
 > balanced cross entropy
 
-&ensp;&ensp;&ensp;&ensp;训练时正负样本数目相差较大，常见的做法就是给正负样本加上权重，给数量较少的正样本的loss更大的权重，减小负样本loss的权重。
-&ensp;&ensp;&ensp;&ensp;主要用于FCN/U-net等分割，边缘检测的网络，用于对像素级别的2分类样本不平衡进行优化。
-sigmoid_cross_entropy公式: 
-  -y_hat * log(sigmoid(y)) - (1 - y_hat) * log(1 - sigmoid(y))
-class_balanced_sigmoid_cross_entropy公式:  
-  -β * y_hat * log(sigmoid(y)) -(1-β) * (1 - y_hat) * log(1 - sigmoid(y))
+&ensp;&ensp;&ensp;&ensp;训练时正负样本数目相差较大，常见的做法就是给正负样本加上权重，给数量较少的正样本的loss更大的权重，减小负样本loss的权重。<br/>
+&ensp;&ensp;&ensp;&ensp;主要用于FCN/U-net等分割，边缘检测的网络，用于对像素级别的2分类样本不平衡进行优化。<br/>
+sigmoid_cross_entropy公式: <br/>
+  -y_hat * log(sigmoid(y)) - (1 - y_hat) * log(1 - sigmoid(y))<br/>
+class_balanced_sigmoid_cross_entropy公式:  <br/>
+  -β * y_hat * log(sigmoid(y)) -(1-β) * (1 - y_hat) * log(1 - sigmoid(y))<br/>
 &ensp;&ensp;&ensp;&ensp;思想就是引入新的权值β，实现正负样本loss的平衡，从而实现对不同正负样本的平衡。
 
 ![](/img/loss/balanced-cross-entropy.png)
